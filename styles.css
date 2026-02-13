@@ -1,6 +1,104 @@
-body{
-  padding: 25px;
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #ffe6f0;
+    text-align: center;
 }
-.title {
-	color: #5C6AC4;
+
+/* TÍTULO BRILLANTE */
+.titulo {
+    font-size: 40px;
+    color: #ff4da6;
+    text-shadow: 0 0 10px #ffb3d9;
+}
+
+/* PAQUETES */
+.paquetes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 40px;
+}
+
+.paquete {
+    background: #fff;
+    border-radius: 20px;
+    padding: 25px;
+    width: 260px;
+    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.3);
+    transition: transform 0.3s;
+}
+
+.paquete:hover {
+    transform: translateY(-10px);
+}
+
+.paquete h3 {
+    color: #ff4da6;
+    font-size: 26px;
+}
+
+.paquete p {
+    color: #666;
+}
+
+.precio {
+    color: #ff1493;
+    font-weight: bold;
+}
+
+/* BOTÓN WHATSAPP */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* FORMULARIO */
+.contacto {
+    background: #fff;
+    margin: 40px auto;
+    padding: 30px;
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+input, textarea {
+    width: 90%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background: #ff4da6;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* GLOBOS */
+.globos::before {
+    content: "🎈 🎀 🎈 🎀 🎈";
+    font-size: 40px;
+    position: fixed;
+    top: -50px;
+    width: 100%;
+    animation: caer 10s linear infinite;
+}
+
+@keyframes caer {
+    from { transform: translateY(-100px); }
+    to { transform: translateY(100vh); }
 }
